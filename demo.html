@@ -13,6 +13,7 @@
             border:1px solid #AAA;
             margin-bottom:3px;
             position:relative;
+            line-height:130%;
 
 
         }
@@ -38,6 +39,10 @@
             float:right;position:relative;
             color:#FFF;
         }
+
+        .dg-listview-item-selected{
+            background-color:#DDD;
+        }
     </style>
 </head>
 <body>
@@ -57,8 +62,10 @@
         jsonToDataFn:function(json){
             return json.response;
         },
-        renderer:function(){
-
+        listeners:{
+            "click": function(dataEntry){
+                console.log(dataEntry);
+            }
         }
     });
     list.load("data/data.json");

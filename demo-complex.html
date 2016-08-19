@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery JSON Listview</title>
+    <script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+    <script type="text/javascript" src="js/dg-listview.js"></script>
+
+    <style type="text/css">
+        .list-item {
+            font-family: arial;
+            padding: 3px;
+            border: 1px solid #AAA;
+            margin-bottom: 3px;
+            position: relative;
+            line-height: 130%;
+
+        }
+
+        .list-phase-heading {
+            float: left;
+            font-size: 0.6em;
+        }
+
+        .importance-heading {
+            float: right;
+            font-size: 0.6em;
+            color: #888;
+        }
+
+        .list-phase-name {
+            float: left;
+        }
+
+        .importance {
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            background-color: #669900;
+            line-height: 40px;
+            text-align: center;
+            float: right;
+            position: relative;
+            color: #FFF;
+        }
+
+        .dg-listview-item-selected {
+            background-color: #DDD;
+        }
+
+
+        .importance-1{
+            background-color:#5D4037;
+        }
+        .importance-2{
+            background-color:#0097A7;
+        }
+        .importance-3{
+            background-color:#669900;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="list">
+
+</div>
+<script type="text/javascript">
+    var list = new DG.ListView({
+        renderTo: "#list",
+        // tpl can be a string or a function returning html for a specific row
+        tpl: function (row) {
+            var importance = Math.ceil(row["importance"] / 3);
+            return '<div class="list-item">' +
+                    '<div class="list-phase-heading">PHASE</div><div class="importance-heading">IMPORTANCE</div><div style="clear:both"></div>' +
+                    '<div class="list-phase-name">' + row["phaseName"] + '</div><div class="importance importance-' + importance + '">' + row['importance'] + '/10</div>' +
+                    '<div style="clear:both"></div>' +
+                    '</div>'
+        },
+        jsonToDataFn: function (json) {
+            return json.response;
+        },
+        listeners: {
+            "click": function (dataEntry) {
+                console.log(dataEntry);
+            }
+        }
+    });
+    list.load("data/data.json");
+
+</script>
+</body>
+</html>

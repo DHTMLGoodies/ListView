@@ -7,20 +7,26 @@ DG.ListView = function (config) {
     this.renderTo = $(config.renderTo);
     if(config.jsonToDataFn != undefined)this.jsonToDataFn = config.jsonToDataFn;
     if(config.tpl != undefined)this.tpl = config.tpl;
-
+    if(config.listeners != undefined)this.listeners = config.listeners;
+    this.usesTplFunction = $.type(this.tpl) == "function";
     this.configure();
 };
 
 $.extend(DG.ListView.prototype, {
 
-    renderer:undefined,
     renderTo:undefined,
     jsonToDataFn : undefined,
     tpl: undefined,
 
+    listeners:undefined,
+
     data:undefined,
 
     tplCols:undefined,
+
+    selectedItem:undefined,
+
+    usesTplFunction:undefined,
 
     configure:function(){
         if($.type(this.tpl) == "string"){
@@ -72,23 +78,46 @@ $.extend(DG.ListView.prototype, {
     },
 
     renderListItem:function(row){
-        var tpl = this.tpl;
-        for(var i=0;i<this.tplCols.length;i++){
-            if(row[this.tplCols[i]] != undefined){
-                tpl = tpl.replace('{' + this.tplCols[i] + '}', row[this.tplCols[i]]);
+        var el;
+
+        if(this.usesTplFunction){
+            var html = this.tpl.call(this, row);
+            el = $(html);
+        }else{
+            var tpl = this.tpl;
+            for(var i=0;i<this.tplCols.length;i++){
+                if(row[this.tplCols[i]] != undefined){
+                    tpl = tpl.replace('{' + this.tplCols[i] + '}', row[this.tplCols[i]]);
+                }
             }
+            el = $(tpl);
         }
-        var el = $(tpl);
+
         this.renderTo.append(el);
-        el.on("click", this.onItemClick.bind(this, row));
+        el.on("click", this.onItemClick.bind(this, row, el));
     },
 
-    onItemClick:function(row){
-        console.log(row);
+    onItemClick:function(row, el){
+        this.fireEvent("click", [row]);
+
+
+        if(this.selectedItem != undefined){
+            this.selectedItem.removeClass("dg-listview-item-selected");
+        }
+
+        el.addClass("dg-listview-item-selected");
+        this.selectedItem = el;
+
     },
 
     clearList:function(){
         this.renderTo.html("");
+    },
+
+    fireEvent:function(name, data){
+        if(this.listeners != undefined && this.listeners[name] != undefined){
+            this.listeners[name].apply(this, data);
+        }
     }
 });
 
