@@ -1,0 +1,301 @@
+{
+  "success": true,
+  "message": "",
+  "code": 200,
+  "resource": "Phases",
+  "service": "read",
+  "response": [
+    {
+      "ID": "1",
+      "categoryID": "1",
+      "phaseName": "Head Lay-In",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "2",
+      "categoryID": "1",
+      "phaseName": "Skull Front",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "3",
+      "categoryID": "1",
+      "phaseName": "Skull 3\/4",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "4",
+      "categoryID": "1",
+      "phaseName": "Skull Profile",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "5",
+      "categoryID": "1",
+      "phaseName": "Simple Asaro Front",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "6",
+      "categoryID": "1",
+      "phaseName": "Simple Asaro 3\/4",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "7",
+      "categoryID": "1",
+      "phaseName": "Simple Asaro Profile",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "8",
+      "categoryID": "1",
+      "phaseName": "Abstraction Front",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "9",
+      "categoryID": "1",
+      "phaseName": "Abstraction 3\/4",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "10",
+      "categoryID": "1",
+      "phaseName": "Abstraction Profile",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "11",
+      "categoryID": "1",
+      "phaseName": "Classic Asaro Front",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "12",
+      "categoryID": "1",
+      "phaseName": "Classic Asaro 3\/4",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "13",
+      "categoryID": "1",
+      "phaseName": "Classic Asaro Profile",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "14",
+      "categoryID": "2",
+      "phaseName": "Feature: Eyes",
+      "importance": "8",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "15",
+      "categoryID": "2",
+      "phaseName": "Feature: Lips",
+      "importance": "8",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "16",
+      "categoryID": "2",
+      "phaseName": "Feature: Nose",
+      "importance": "8",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "17",
+      "categoryID": "2",
+      "phaseName": "Feature: Ears",
+      "importance": "8",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "18",
+      "categoryID": "2",
+      "phaseName": "Cast Drawing Male",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "19",
+      "categoryID": "2",
+      "phaseName": "Cast Drawing Female",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "20",
+      "categoryID": "2",
+      "phaseName": "Drawing from Photo",
+      "importance": "4",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "21",
+      "categoryID": "3",
+      "phaseName": "5 Minute Quick Sketch Male ",
+      "importance": "7",
+      "fixedTimeInMinutes": "5",
+      "type": "phase"
+    },
+    {
+      "ID": "22",
+      "categoryID": "3",
+      "phaseName": "10 Minute Quick Sketch Male ",
+      "importance": "7",
+      "fixedTimeInMinutes": "10",
+      "type": "phase"
+    },
+    {
+      "ID": "23",
+      "categoryID": "3",
+      "phaseName": "20 Minute Quick Sketch Male ",
+      "importance": "7",
+      "fixedTimeInMinutes": "20",
+      "type": "phase"
+    },
+    {
+      "ID": "24",
+      "categoryID": "3",
+      "phaseName": "1 Hour Quick Sketch Male ",
+      "importance": "7",
+      "fixedTimeInMinutes": "60",
+      "type": "phase"
+    },
+    {
+      "ID": "25",
+      "categoryID": "3",
+      "phaseName": "30 Minute Master Study - Male ",
+      "importance": "7",
+      "fixedTimeInMinutes": "30",
+      "type": "phase"
+    },
+    {
+      "ID": "26",
+      "categoryID": "3",
+      "phaseName": "1 Hour Master Study - Male ",
+      "importance": "7",
+      "fixedTimeInMinutes": "60",
+      "type": "phase"
+    },
+    {
+      "ID": "27",
+      "categoryID": "3",
+      "phaseName": "5 Minute Quick Sketch Female ",
+      "importance": "7",
+      "fixedTimeInMinutes": "5",
+      "type": "phase"
+    },
+    {
+      "ID": "28",
+      "categoryID": "3",
+      "phaseName": "10 Minute Quick Sketch Female ",
+      "importance": "7",
+      "fixedTimeInMinutes": "10",
+      "type": "phase"
+    },
+    {
+      "ID": "29",
+      "categoryID": "3",
+      "phaseName": "20 Minute Quick Sketch Female ",
+      "importance": "7",
+      "fixedTimeInMinutes": "20",
+      "type": "phase"
+    },
+    {
+      "ID": "30",
+      "categoryID": "3",
+      "phaseName": "1 Hour Quick Sketch Female ",
+      "importance": "7",
+      "fixedTimeInMinutes": "60",
+      "type": "phase"
+    },
+    {
+      "ID": "31",
+      "categoryID": "3",
+      "phaseName": "30 Minute Master Study - Female ",
+      "importance": "7",
+      "fixedTimeInMinutes": "30",
+      "type": "phase"
+    },
+    {
+      "ID": "32",
+      "categoryID": "3",
+      "phaseName": "1 Hour Master Study - Female ",
+      "importance": "7",
+      "fixedTimeInMinutes": "60",
+      "type": "phase"
+    },
+    {
+      "ID": "33",
+      "categoryID": "5",
+      "phaseName": "Warmup - Basic Shapes",
+      "importance": "9",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "34",
+      "categoryID": "6",
+      "phaseName": "Negative Shapes",
+      "importance": "7",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "35",
+      "categoryID": "6",
+      "phaseName": "Contour Lines",
+      "importance": "5",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    },
+    {
+      "ID": "36",
+      "categoryID": "6",
+      "phaseName": "Building Objects with Basic Forms",
+      "importance": "6",
+      "fixedTimeInMinutes": null,
+      "type": "phase"
+    }
+  ],
+  "log": {
+    "time": 0.12917280197144,
+    "queries": 2
+  }
+}
